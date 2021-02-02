@@ -1,0 +1,12 @@
+main {
+    margin: 10px;
+}
+.form-erro {
+    border-color: red;
+}
+.form-acerto {
+    border-color: #00FF00;
+}
+.mensagem-erro-nome, .mensagem-erro-cpf, .mensagem-erro-email {
+    color: red;
+}
