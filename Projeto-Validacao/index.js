@@ -8,8 +8,6 @@ botao.addEventListener("click", function(event){
 
     verificar_email()
 
-       
-    
 }) 
 
 function verificar_nome(){
@@ -19,11 +17,12 @@ function verificar_nome(){
     var resultado = null
     if(resultado = exp.exec(nome_alvo)){
         nome.classList.add("form-acerto")
+        mostrar_mensagem_acerto_nome()
     }
     else {
         nome.classList.remove("form-acerto")
         nome.classList.add("form-erro")
-        mostrar_erro_nome()
+        mostrar_mensagem_erro_nome()
     }
 }
 
@@ -34,11 +33,12 @@ function verificar_cpf(){
     var resultado = null
     if(resultado = exp.exec(cpf_alvo)){
         cpf.classList.add("form-acerto")
+        mostrar_mensagem_acerto_cpf()
     }   
     else {
         cpf.classList.remove("form-acerto")
         cpf.classList.add("form-erro")
-        mostrar_erro_cpf()
+        mostrar_mensagem_erro_cpf()
     }
 }
 
@@ -49,24 +49,43 @@ function verificar_email(){
     var resultado = null
     if(resultado = exp.exec(email_alvo)){
         email.classList.add("form-acerto")
+        mostra_mensagem_acerto_email()
     }
     else {
         email.classList.remove("form-acerto")
         email.classList.add("form-erro")
-        mostra_erro_email()
+        mostra_mensagem_erro_email()
     }
 }
-function mostrar_erro_nome(){
-    var erro_nome = document.querySelector(".mensagem-erro-nome")
+function mostrar_mensagem_erro_nome(){
+    var erro_nome = document.querySelector(".mensagem-nome")
     erro_nome.innerHTML = "Verifique o Nome inserido!!"
 }
 
-function mostrar_erro_cpf(){
-    var erro_cpf = document.querySelector(".mensagem-erro-cpf")
+function mostrar_mensagem_erro_cpf(){
+    var erro_cpf = document.querySelector(".mensagem-cpf")
     erro_cpf.innerHTML = "Verifique o CPF inserido!!"
 }
 
-function mostra_erro_email() {
-    var erro_email = document.querySelector(".mensagem-erro-email")
+function mostra_mensagem_erro_email() {
+    var erro_email = document.querySelector(".mensagem-email")
     erro_email.innerHTML = "Verifique o Email inserido!!"
+}
+
+function mostrar_mensagem_acerto_nome(){
+    var acerto_nome = document.querySelector(".mensagem-nome")
+    acerto_nome.innerHTML = "Nome cadastrado com sucesso!!"
+    acerto_nome.style.color = "#00FF00"
+}
+
+function mostrar_mensagem_acerto_cpf(){
+    var acerto_cpf = document.querySelector(".mensagem-cpf")
+    acerto_cpf.innerHTML = "CPF cadastrado com sucesso!!"
+    acerto_cpf.style.color = "#00FF00"
+}
+
+function mostra_mensagem_acerto_email() {
+    var acerto_email = document.querySelector(".mensagem-email")
+    acerto_email.innerHTML = "Email cadastrado com sucesso!!"
+    acerto_email.style.color = "#00FF00"
 }

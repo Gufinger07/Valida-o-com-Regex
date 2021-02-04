@@ -7,6 +7,6 @@ main {
 .form-acerto {
     border-color: #00FF00;
 }
-.mensagem-erro-nome, .mensagem-erro-cpf, .mensagem-erro-email {
+.mensagem-nome, .mensagem-cpf, .mensagem-email {
     color: red;
 }
